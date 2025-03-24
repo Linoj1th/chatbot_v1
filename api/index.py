@@ -3,7 +3,7 @@ import re
 import os
 from openai import OpenAI
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.abspath("../templates"))
 
 # Get API key from environment variable
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
